@@ -35,6 +35,7 @@ class PlayerShould {
         a_player = new Player();
     }
 
+
     @Test
     void pass_happy_test(){
         assertEquals(1,1);
@@ -43,10 +44,14 @@ class PlayerShould {
     @Test
     void have_two_cards(){
 
-        a_player.takes(new Card(1));
-        a_player.takes(new Card(3));
+        a_player.takes(new Card());
+        a_player.takes(new Card());
 
         assertEquals(2, a_player.cards.size());
     }
 
+    @Test
+    void display_a_card_according_to_the_game_turn(){
+
+    }
 }

@@ -13,4 +13,7 @@ public class Player {
     public String displayCardOfTurn(int turn) {
         return cards.get(turn-1).displayFigure();
     }
+
+    public void duelWith(Player otherPlayer, int i) {
+    }
 }

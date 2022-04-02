@@ -29,6 +29,7 @@ import KataCards.Player;
 class PlayerShould {
 
     private Player a_player;
+    private Player otherPlayer;
 
     @BeforeEach
     void setUp(){
@@ -57,6 +58,16 @@ class PlayerShould {
 
         assertEquals("1", a_player.displayCardOfTurn(1));
         assertEquals("Q", a_player.displayCardOfTurn(2));
+    }
+
+    @Test
+    void increase_his_score_if_his_card_won_the_duel_with_other_player(){
+
+        a_player.takes(new Card(1));
+        otherPlayer.takes(new Card(1));
+
+        a_player.duelWith(otherPlayer,1);
+        a_player.duelWith(otherPlayer,1);
     }
 
 }

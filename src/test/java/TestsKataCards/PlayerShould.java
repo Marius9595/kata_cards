@@ -4,6 +4,8 @@ import KataCards.Card;
 import KataCards.Player;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -39,7 +41,5 @@ class PlayerShould {
         somePlayer.takes(new Card());
 
         assertEquals(2, somePlayer.cards.size());
-        assertInstanceOf(Card, somePlayer.cards);
-
     }
 }

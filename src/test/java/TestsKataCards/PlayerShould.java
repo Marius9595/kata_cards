@@ -27,6 +27,4 @@ class PlayerShould {
     void pass_happy_test(){
         assertEquals(1,1);
     }
-
-    //
 }

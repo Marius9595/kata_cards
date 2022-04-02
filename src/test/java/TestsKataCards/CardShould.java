@@ -1,5 +1,6 @@
 package TestsKataCards;
 
+import KataCards.ResultOfDuel;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,16 +19,16 @@ public class CardShould {
 
     @BeforeEach
     void setUp(){
-        var lowestCard = new Card(1);
-        var highestCard = new Card(10);
+         lowestCard = new Card(1);
+         highestCard = new Card(10);
     }
 
     @Test
     void when_face_to_other_card_lose_win_or_tie_according_to_ranking(){
-        
-        assertEquals(Result.WON,lowestCard.faceTo(highestCard));
-        assertEquals(Result.LOST,highestCard.faceTo(lowestCard));
-        assertEquals(Result.TIE,lowestCard.faceTo(lowestCard));
+
+        assertEquals(ResultOfDuel.LOST, lowestCard.faceTo(highestCard));
+        assertEquals(ResultOfDuel.WON, highestCard.faceTo(lowestCard));
+        assertEquals(ResultOfDuel.TIE, lowestCard.faceTo(lowestCard));
     }
 
 }

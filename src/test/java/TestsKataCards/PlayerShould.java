@@ -66,8 +66,11 @@ class PlayerShould {
         a_player.takes(new Card(1));
         otherPlayer.takes(new Card(1));
 
-        a_player.duelWith(otherPlayer,1);
-        a_player.duelWith(otherPlayer,1);
+        a_player.duelWith(otherPlayer);
+
+        assertEquals(1, a_player.getScore());
+
+
     }
 
 }

@@ -20,7 +20,7 @@ public class CardShould {
     @BeforeEach
     void setUp(){
          lowestCard = new Card(1);
-         highestCard = new Card(10);
+         highestCard = new Card(12);
     }
 
     @Test
@@ -29,6 +29,12 @@ public class CardShould {
         assertEquals(ResultOfDuel.LOST, lowestCard.faceTo(highestCard));
         assertEquals(ResultOfDuel.WON, highestCard.faceTo(lowestCard));
         assertEquals(ResultOfDuel.TIE, lowestCard.faceTo(lowestCard));
+    }
+
+    @Test
+    void shows_his_figure(){
+        assertEquals("1", lowestCard.displayFigure());
+        assertEquals("K", lowestCard.displayFigure());
     }
 
 }

@@ -17,4 +17,8 @@ public class Card {
         }
         return ResultOfDuel.TIE;
     }
+
+    public String displayFigure() {
+        return "";
+    }
 }

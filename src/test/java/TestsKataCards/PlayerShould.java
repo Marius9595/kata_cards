@@ -1,12 +1,13 @@
 package TestsKataCards;
 
-import KataCards.Card;
-import KataCards.Player;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
+
+
+import KataCards.Card;
+import KataCards.Player;
 
 
 /*
@@ -27,19 +28,30 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerShould {
 
+    private Player a_player;
+
+    @BeforeEach
+    void setUp(){
+        a_player = new Player();
+    }
+
+
     @Test
     void pass_happy_test(){
         assertEquals(1,1);
     }
 
     @Test
-    void has_two_cards(){
+    void have_two_cards(){
 
-        var somePlayer = new Player();
+        a_player.takes(new Card());
+        a_player.takes(new Card());
 
-        somePlayer.takes(new Card());
-        somePlayer.takes(new Card());
+        assertEquals(2, a_player.cards.size());
+    }
 
-        assertEquals(2, somePlayer.cards.size());
+    @Test
+    void display_a_card_according_to_the_game_turn(){
+
     }
 }

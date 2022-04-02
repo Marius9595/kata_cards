@@ -34,6 +34,7 @@ class PlayerShould {
     @BeforeEach
     void setUp(){
         a_player = new Player();
+        otherPlayer = new Player();
     }
 
     @Test
@@ -63,14 +64,16 @@ class PlayerShould {
     @Test
     void increase_his_score_if_his_card_won_the_duel_with_other_player(){
 
-        a_player.takes(new Card(1));
+        a_player.takes(new Card(2));
+        otherPlayer.takes(new Card(3));
+        a_player.takes(new Card(10));
         otherPlayer.takes(new Card(1));
 
         a_player.duelWith(otherPlayer);
+        a_player.duelWith(otherPlayer);
 
-        assertEquals(1, a_player.getScore());
-
-
+        assertEquals(1, a_player.score);
+        assertEquals(1, otherPlayer.score);
     }
 
 }

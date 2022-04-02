@@ -24,6 +24,7 @@ public class CardShould {
 
     @Test
     void when_face_to_other_card_lose_win_or_tie_according_to_ranking(){
+        
         assertEquals(Result.WON,lowestCard.faceTo(highestCard));
         assertEquals(Result.LOST,highestCard.faceTo(lowestCard));
         assertEquals(Result.TIE,lowestCard.faceTo(lowestCard));

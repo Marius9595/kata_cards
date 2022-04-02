@@ -1,5 +1,7 @@
 package TestsKataCards;
 
+import KataCards.Card;
+import KataCards.Player;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -26,5 +28,18 @@ class PlayerShould {
     @Test
     void pass_happy_test(){
         assertEquals(1,1);
+    }
+
+    @Test
+    void has_two_cards(){
+
+        var somePlayer = new Player();
+
+        somePlayer.takes(new Card());
+        somePlayer.takes(new Card());
+
+        assertEquals(2, somePlayer.cards.size());
+        assertInstanceOf(Card, somePlayer.cards);
+
     }
 }

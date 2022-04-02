@@ -34,7 +34,7 @@ public class CardShould {
     @Test
     void shows_his_figure(){
         assertEquals("1", lowestCard.displayFigure());
-        assertEquals("K", lowestCard.displayFigure());
+        assertEquals("K", highestCard.displayFigure());
     }
 
 }

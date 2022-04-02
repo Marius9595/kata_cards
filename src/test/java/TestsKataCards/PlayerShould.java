@@ -49,4 +49,14 @@ class PlayerShould {
         assertEquals(2, a_player.cards.size());
     }
 
+    @Test
+    void use_his_cards_in_the_same_order_as_they_were_given(){
+
+        a_player.takes(new Card(1));
+        a_player.takes(new Card(11));
+
+        assertEquals("1", a_player.displayCardOfTurn(1));
+        assertEquals("Q", a_player.displayCardOfTurn(11));
+    }
+
 }

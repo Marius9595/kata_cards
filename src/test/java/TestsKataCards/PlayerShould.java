@@ -56,7 +56,7 @@ class PlayerShould {
         a_player.takes(new Card(11));
 
         assertEquals("1", a_player.displayCardOfTurn(1));
-        assertEquals("Q", a_player.displayCardOfTurn(11));
+        assertEquals("Q", a_player.displayCardOfTurn(2));
     }
 
 }

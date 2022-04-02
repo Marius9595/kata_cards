@@ -9,4 +9,8 @@ public class Player {
     public void takes(Card card) {
         cards.add(card);
     }
+
+    public String displayCardOfTurn(int turn) {
+        return cards.get(turn-1).displayFigure();
+    }
 }
